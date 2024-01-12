@@ -1,0 +1,68 @@
+[data-theme="dark"] {
+  --background-color: #313131;
+  --color: #efefef;
+}
+
+[data-theme="ligth"] {
+  --background-color: #efefef;
+  --color: #313131;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+}
+
+#container {
+  text-align: center;
+}
+
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color);
+}
+
+#clock {
+  font-size: 12vw;
+  color: var(--color);
+}
+
+#progressBarContainer {
+  width: 50vw;
+  height: 1vw;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #c4c4c4;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 1s linear, background-color 1s linear;
+}
+
+@media screen and (max-width: 600px) {
+  #clock {
+      font-size: 12vw;
+  }
+
+  #progressBarContainer {
+      width: 50vw;
+      height: 1vw;
+  }
+
+  #themeToggle {
+    font-size: 15px;
+  }
+}
